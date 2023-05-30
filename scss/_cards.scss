@@ -1,0 +1,98 @@
+.card {
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+	font-size: 2rem;
+	color: $color-white-transparent;
+	margin-top: 5rem;
+
+	@include odaziv(tab-land) {
+		flex-wrap: wrap;
+	}
+
+	&__item {
+		padding: 2rem;
+		display: flex;
+		// justify-content: space-between;
+		align-items: center;
+		width: 40rem;
+		height: 25rem;
+		border-radius: $buttton-border-radius;
+		cursor: pointer;
+		transition: all 0.2s;
+
+		@include odaziv(tab-land) {
+			margin: 2rem;
+		}
+
+		// @media only screen and (max-width: 600px) {
+		// 	.card__item {
+		// 	  flex-basis: 75% !important;
+		// 	}
+		//   }
+
+		@include odaziv(velikitelefon) {
+			flex-basis: 85% !important;
+		}
+
+		&:hover {
+			transform: scale(1.1);
+			color: yellowgreen;
+		}
+
+		&--1 {
+			background: $color-accent;
+			flex-basis: 24.5%;
+			@include odaziv(tab-land) {
+				flex-basis: 45%;
+			}
+		}
+		&--2 {
+			background: $color-secondary-light;
+			flex-basis: 24.5%;
+			@include odaziv(tab-land) {
+				flex-basis: 45%;
+			}
+		}
+		&--3 {
+			background: $color-secondary;
+			flex-basis: 24.5%;
+			@include odaziv(tab-land) {
+				flex-basis: 45%;
+			}
+		}
+		&--4 {
+			background: $color-primary-light;
+			flex-basis: 24.5%;
+			@include odaziv(tab-land) {
+				flex-basis: 45%;
+			}
+		}
+	}
+
+	&__header {
+		display: block;
+		width: 100%;
+		margin-bottom: 1rem;
+		font-size: 3rem;
+	}
+
+	&__description {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		height: 100%;
+		margin-top: 3rem;
+	}
+
+	&__icon {
+		font-size: 10rem;
+		margin-right: 3rem;
+	}
+}
+
+// @media only screen and (max-width: 639px) {
+// 	 	.card__item {
+// 	 	  flex-basis: 75% !important;
+// 	 	}
+// 	   }

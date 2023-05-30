@@ -1,0 +1,55 @@
+$color-primary: #0e1111;
+$color-primary-light: #232b2b;
+$color-secondary: #353839;
+$color-secondary-light: #3b444b;
+$color-accent: #414a4c;
+
+$color-text: #333;
+$color-white: #fff;
+$color-white-transparent: rgba($color-white, 0.8);
+
+$font-primary: Lato, sans-serif;
+
+$buttton-border-radius: 0.5rem;
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+::selection {
+	color: black;
+	background: $color-white;
+}
+
+html {
+	box-sizing: border-box;
+	font-size: 62.5%; //1rem=10px 10px/16px=62.5%
+
+	@include odaziv(tab-land) {
+		font-size: 56.25%; //9px=1rem; 9/16px=56.25%
+	}
+
+	@include odaziv(tab-port) {
+		font-size: 50%; //8px=1rem; 8/16px=50%
+	}
+
+	@include odaziv(phone) {
+		font-size: 43.75%; //7px=1rem; 7/16px=43.75%
+	}
+
+	@include odaziv(big-desktop) {
+		font-size: 75%; //12px=1rem; 12/16px=75%
+	}
+}
+
+body {
+	font-family: $font-primary;
+	color: $color-text;
+	font-weight: 400;
+	line-height: 1.6;
+	background: $color-primary;
+}
